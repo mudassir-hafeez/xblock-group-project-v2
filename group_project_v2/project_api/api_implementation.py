@@ -1,9 +1,5 @@
-from future import standard_library
-standard_library.install_aliases()
-from builtins import str
-from builtins import object
 import json
-from six.moves.urllib.parse import urlencode
+from urllib.parse import urlencode
 
 import itertools
 
@@ -66,7 +62,7 @@ class ProjectAPI(object):
         if method == DELETE:
             return None
 
-        return json.loads(response.read())
+        return json.loads(response.read().decode('utf8'))
 
     def send_request(self, method, url_parts, data=None, query_params=None, no_trailing_slash=False):
         url = self.build_url(url_parts, query_params, no_trailing_slash)

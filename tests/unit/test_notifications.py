@@ -1,5 +1,3 @@
-from builtins import next
-from builtins import str
 from datetime import datetime, timedelta
 from unittest import TestCase
 import ddt

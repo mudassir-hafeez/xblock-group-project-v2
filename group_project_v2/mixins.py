@@ -1,6 +1,3 @@
-from builtins import str
-from builtins import next
-from builtins import object
 import functools
 import logging
 import os
@@ -288,14 +285,10 @@ class AuthXBlockMixin(SettingsMixin, ProjectAPIXBlockMixin, CourseAwareXBlockMix
             """
             self.project_api = project_api
             self.user_id = user_id
+            # type: Optional[Set[int]]
             self.filter_org_ids = set(filter_org_ids) if filter_org_ids is not None else None
-            """
-            :type: set[int] or None
-            """  # pylint: disable=pointless-string-statement
+            # type: Optional[Set[int]]
             self.allowed_org_ids = set(allowed_org_ids) if allowed_org_ids is not None else None
-            """
-            :type: set[int] or None
-            """  # pylint: disable=pointless-string-statement
 
         def can_access_other_user(self, user_id):
             """

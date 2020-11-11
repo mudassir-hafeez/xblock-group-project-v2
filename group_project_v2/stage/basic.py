@@ -1,10 +1,8 @@
-from builtins import str
 import logging
 from xblock.core import XBlock
 from xblock.fields import String, Scope
 from xblock.validation import ValidationMessage
 from web_fragments.fragment import Fragment
-
 
 from group_project_v2 import messages
 from group_project_v2.api_error import ApiError

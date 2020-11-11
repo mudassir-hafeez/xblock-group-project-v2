@@ -1,8 +1,6 @@
 """
 This module contains classes representing various GroupProject page elements
 """
-from builtins import next
-from builtins import object
 from lazy.lazy import lazy
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.support.select import Select

@@ -1,5 +1,4 @@
 """ Tests for Base Stage Class """
-from builtins import range
 from collections import OrderedDict
 
 import ddt

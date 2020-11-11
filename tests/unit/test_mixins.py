@@ -1,8 +1,6 @@
 from __future__ import print_function
 # pylint:disable=protected-access,no-self-use,invalid-name
 
-from builtins import str
-from builtins import object
 from unittest import TestCase
 
 import ddt

@@ -1,6 +1,3 @@
-from __future__ import print_function
-from builtins import str
-from builtins import object
 import json
 import os
 from unittest import TestCase

@@ -1,5 +1,3 @@
-from builtins import str
-from builtins import range
 from unittest import TestCase
 import ddt
 import mock

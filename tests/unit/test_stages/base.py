@@ -1,4 +1,3 @@
-from builtins import object
 from unittest import TestCase
 from datetime import datetime
 import ddt

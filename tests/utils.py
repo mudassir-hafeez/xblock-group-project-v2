@@ -1,5 +1,3 @@
-from past.builtins import basestring
-from builtins import object
 from contextlib import contextmanager
 from datetime import datetime
 from urllib.parse import urlparse
@@ -183,7 +181,7 @@ def get_other_windows(browser):
 def parse_datetime(datetime_string):
     return (
         datetime.strptime(datetime_string.split(".")[0], "%Y-%m-%d %H:%M:%S")
-        if isinstance(datetime_string, basestring) else None
+        if isinstance(datetime_string, str) else None
     )
 
 

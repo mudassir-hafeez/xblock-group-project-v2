@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-from builtins import range
 import logging
 import itertools
 from operator import itemgetter
@@ -107,11 +106,8 @@ class GroupProjectXBlock(CommonMixinCollection, DashboardXBlockMixin, DashboardR
 
     @staticmethod
     def _render_child_fragment_with_fallback(child, context, fallback_message, view='student_view'):
-        # pylint: disable=logging-format-interpolation
         if child:
-            log.debug("Rendering {child} with context: {context}".format(
-                child=child.__class__.__name__, context=context,
-            ))
+            log.debug("Rendering %s with context: %s", child.__class__.__name__, context)
             return child.render(view, context)
         return Fragment(fallback_message)
 

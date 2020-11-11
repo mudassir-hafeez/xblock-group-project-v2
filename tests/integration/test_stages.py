@@ -1,9 +1,6 @@
 """
 Tests for stage contents and interaction
 """
-from builtins import zip
-from builtins import str
-from builtins import range
 from collections import defaultdict
 
 import datetime

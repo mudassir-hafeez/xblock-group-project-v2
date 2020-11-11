@@ -2,8 +2,6 @@
 This module contains Project Navigator XBlock and it's children view XBlocks
 """
 import pkg_resources
-from builtins import str
-from builtins import object
 import logging
 from lazy.lazy import lazy
 from opaque_keys import InvalidKeyError

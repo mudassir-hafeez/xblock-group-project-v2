@@ -1,15 +1,9 @@
 # -*- coding: utf-8 -*-
-from __future__ import division
-from future import standard_library
-standard_library.install_aliases()
-from builtins import next
-from builtins import str
 from past.utils import old_div
-from builtins import object
 import csv
 import functools
 import logging
-import urllib.parse  # pylint: disable=F0401
+import urllib.parse
 import boto3
 from collections import namedtuple
 
@@ -126,7 +120,7 @@ def mean(value_array):
 
     try:
         numeric_values = [float(v) for v in value_array]
-        return float(old_div(sum(numeric_values), len(numeric_values)))
+        return float(sum(numeric_values) / len(numeric_values))
     except (ValueError, TypeError, ZeroDivisionError) as exc:
         log.warning(exc.message)
         return None
