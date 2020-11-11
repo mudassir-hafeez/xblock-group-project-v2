@@ -1,15 +1,18 @@
+import itertools
 import json
 from urllib.parse import urlencode
 
-import itertools
-
 from group_project_v2.api_error import api_error_protect
-from group_project_v2.json_requests import DELETE, GET, PUT, POST
-from group_project_v2.utils import memoize_with_expiration, build_date_field, is_absolute
+from group_project_v2.json_requests import DELETE, GET, POST, PUT
 from group_project_v2.project_api.dtos import (
-    UserDetails, ProjectDetails, WorkgroupDetails, CompletionDetails,
-    OrganisationDetails, UserGroupDetails
+    CompletionDetails,
+    OrganisationDetails,
+    ProjectDetails,
+    UserDetails,
+    UserGroupDetails,
+    WorkgroupDetails,
 )
+from group_project_v2.utils import build_date_field, is_absolute, memoize_with_expiration
 
 API_PREFIX = '/'.join(['api', 'server'])
 WORKGROUP_API = '/'.join([API_PREFIX, 'workgroups'])

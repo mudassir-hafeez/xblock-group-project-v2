@@ -1,5 +1,6 @@
 import logging
 from datetime import datetime, timedelta
+
 import pytz
 
 from group_project_v2.utils import log_and_suppress_exceptions

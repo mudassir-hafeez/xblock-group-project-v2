@@ -1,35 +1,48 @@
 # -*- coding: utf-8 -*-
-import logging
 import itertools
-from operator import itemgetter
+import logging
 from datetime import datetime
+from operator import itemgetter
 
 import webob
 from lazy.lazy import lazy
 from opaque_keys import InvalidKeyError
+from web_fragments.fragment import Fragment
 from xblock.core import XBlock
 from xblock.exceptions import NoSuchUsage
-from xblock.fields import Scope, String, Float, Integer, DateTime
+from xblock.fields import DateTime, Float, Integer, Scope, String
 from xblock.validation import ValidationMessage
-from web_fragments.fragment import Fragment
-from xblockutils.studio_editable import XBlockWithPreviewMixin, NestedXBlockSpec
+from xblockutils.studio_editable import NestedXBlockSpec, XBlockWithPreviewMixin
 
 from group_project_v2 import messages
 from group_project_v2.mixins import (
-    CommonMixinCollection, DashboardXBlockMixin, DashboardRootXBlockMixin,
-    AuthXBlockMixin
+    AuthXBlockMixin,
+    CommonMixinCollection,
+    DashboardRootXBlockMixin,
+    DashboardXBlockMixin,
 )
 from group_project_v2.project_navigator import GroupProjectNavigatorXBlock
+from group_project_v2.stage import (
+    STAGE_TYPES,
+    BasicStage,
+    CompletionStage,
+    EvaluationDisplayStage,
+    GradeDisplayStage,
+    PeerReviewStage,
+    SubmissionStage,
+    TeamEvaluationStage,
+)
 from group_project_v2.stage.utils import StageState
 from group_project_v2.utils import (
-    mean, make_key, groupwork_protected_view, get_default_stage, DiscussionXBlockShim, Constants,
-    add_resource, gettext as _, get_block_content_id, export_to_csv, named_tuple_with_docstring
+    Constants,
+    DiscussionXBlockShim,
+    add_resource,
+    export_to_csv,
+    get_block_content_id,
+    get_default_stage,
 )
-from group_project_v2.stage import (
-    BasicStage, SubmissionStage, TeamEvaluationStage, PeerReviewStage,
-    EvaluationDisplayStage, GradeDisplayStage, CompletionStage,
-    STAGE_TYPES
-)
+from group_project_v2.utils import gettext as _
+from group_project_v2.utils import groupwork_protected_view, make_key, mean, named_tuple_with_docstring
 
 log = logging.getLogger(__name__)
 

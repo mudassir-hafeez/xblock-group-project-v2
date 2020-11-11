@@ -8,7 +8,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from xblockutils.resources import ResourceLoader
 
 from group_project_v2.api_error import ApiError
-from group_project_v2.mixins import UserAwareXBlockMixin, AuthXBlockMixin
+from group_project_v2.mixins import AuthXBlockMixin, UserAwareXBlockMixin
 from group_project_v2.project_api import TypedProjectAPI
 from group_project_v2.project_api.dtos import UserDetails, WorkgroupDetails
 from group_project_v2.stage_components import GroupProjectReviewQuestionXBlock

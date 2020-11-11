@@ -1,15 +1,13 @@
 from datetime import datetime, timedelta
 from unittest import TestCase
+
 import ddt
 import mock
-from group_project_v2.notifications import (
-    StageNotificationsMixin,
-    NotificationMessageTypes,
-    NotificationScopes,
-)
+from edx_notifications.data import NotificationType
+
+from group_project_v2.notifications import NotificationMessageTypes, NotificationScopes, StageNotificationsMixin
 from group_project_v2.project_api.dtos import WorkgroupDetails
 from tests.utils import TestWithPatchesMixin, parse_datetime
-from edx_notifications.data import NotificationType
 
 
 def get_notification_type(message_type):

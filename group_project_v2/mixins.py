@@ -1,7 +1,7 @@
 import functools
+import itertools
 import logging
 import os
-import itertools
 
 from lazy.lazy import lazy
 from opaque_keys import InvalidKeyError
@@ -9,15 +9,22 @@ from opaque_keys.edx.locator import BlockUsageLocator
 from web_fragments.fragment import Fragment
 from xblock.completable import XBlockCompletionMode
 from xblockutils.studio_editable import (
-    StudioContainerWithNestedXBlocksMixin, StudioContainerXBlockMixin, StudioEditableXBlockMixin
+    StudioContainerWithNestedXBlocksMixin,
+    StudioContainerXBlockMixin,
+    StudioEditableXBlockMixin,
 )
 
 from group_project_v2.api_error import ApiError
 from group_project_v2.project_api import ProjectAPIXBlockMixin
 from group_project_v2.project_api.dtos import WorkgroupDetails
 from group_project_v2.utils import (
-    MUST_BE_OVERRIDDEN, NO_EDITABLE_SETTINGS, Constants, GroupworkAccessDeniedError,
-    loader, groupwork_protected_view, add_resource
+    MUST_BE_OVERRIDDEN,
+    NO_EDITABLE_SETTINGS,
+    Constants,
+    GroupworkAccessDeniedError,
+    add_resource,
+    groupwork_protected_view,
+    loader,
 )
 
 log = logging.getLogger(__name__)

@@ -3,9 +3,10 @@
 # Imports ###########################################################
 
 import os
-from setuptools import setup, find_packages
-from group_project_v2.app_config import ENTRYPOINTS
 
+from setuptools import find_packages, setup
+
+from group_project_v2.app_config import ENTRYPOINTS
 
 # Functions #########################################################
 

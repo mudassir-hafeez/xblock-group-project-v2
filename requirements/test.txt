@@ -11,3 +11,4 @@ edx-i18n-tools==0.5.3
 pytest-django
 pycodestyle
 pylint
+isort

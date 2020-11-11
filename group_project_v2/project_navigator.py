@@ -3,14 +3,14 @@ This module contains Project Navigator XBlock and it's children view XBlocks
 """
 import pkg_resources
 import logging
+
 from lazy.lazy import lazy
 from opaque_keys import InvalidKeyError
 from django import utils
+from web_fragments.fragment import Fragment
 from xblock.core import XBlock
 from xblock.exceptions import NoSuchUsage
 from xblock.validation import ValidationMessage
-from web_fragments.fragment import Fragment
-
 from xblockutils.studio_editable import (
     NestedXBlockSpec,
     StudioContainerXBlockMixin,
@@ -27,13 +27,9 @@ from group_project_v2.mixins import (
     XBlockWithComponentsMixin,
     XBlockWithUrlNameDisplayMixin,
 )
-
-from group_project_v2.utils import (
-    DiscussionXBlockShim,
-    add_resource,
-    gettext as _,
-    loader,
-)
+from group_project_v2.utils import DiscussionXBlockShim, add_resource
+from group_project_v2.utils import gettext as _
+from group_project_v2.utils import loader
 
 log = logging.getLogger(__name__)
 

@@ -23,6 +23,7 @@ script:
     - mkdir var
     - touch workbench.log
     - xvfb-run pytest
+    - isort --check-only --diff --recursive tests group_project_v2  *.py
 notifications:
   email: false
 addons:

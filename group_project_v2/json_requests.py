@@ -1,7 +1,7 @@
 """ GET, POST, DELETE, PUT requests for json client """
 import json
 import logging
-from urllib.request import urlopen, Request, build_opener, HTTPHandler
+from urllib.request import HTTPHandler, Request, build_opener, urlopen
 
 from django.conf import settings
 

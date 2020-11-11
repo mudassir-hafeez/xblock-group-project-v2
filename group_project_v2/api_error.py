@@ -1,9 +1,8 @@
-import logging
 import json
+import logging
 from urllib.error import HTTPError
 
 from group_project_v2.utils import gettext as _
-
 
 log = logging.getLogger(__name__)
 

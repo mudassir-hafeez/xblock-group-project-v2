@@ -1,21 +1,20 @@
 # -*- coding: utf-8 -*-
-from past.utils import old_div
 import csv
 import functools
 import logging
 import urllib.parse
-import boto3
-from collections import namedtuple
-
-from datetime import date, datetime, timedelta
 import xml.etree.ElementTree as ET
+from collections import namedtuple
+from datetime import date, datetime, timedelta
 
+import boto3
 from dateutil import parser
+from django.conf import settings
+from django.core.files.storage import default_storage
 from django.template.defaulttags import register
 from django.utils.safestring import mark_safe
-from django.core.files.storage import default_storage
-from django.conf import settings
 from lazy.lazy import lazy
+from past.utils import old_div
 from storages.backends.s3boto import S3BotoStorage
 from web_fragments.fragment import Fragment
 from xblockutils.resources import ResourceLoader
